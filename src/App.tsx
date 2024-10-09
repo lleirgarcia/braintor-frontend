@@ -25,7 +25,7 @@ const App: React.FC = () => {
     setSummary('');
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}\process`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/process`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,10 +68,10 @@ const App: React.FC = () => {
       <Container maxWidth="md" sx={{ mt: 4 }}>
         <Box sx={{ mb: 4, textAlign: 'center' }}>
           <Typography variant="h4" component="h1" gutterBottom>
-            Transcriptor de Texto
+            Text Transcriber
           </Typography>
           <Typography variant="body1">
-            Introduce el texto a continuación para procesarlo y obtener un resumen generado automáticamente.
+            Enter the text below to process it and get an automatically generated summary.
           </Typography>
         </Box>
         <Box sx={{ mb: 2 }}>
@@ -95,7 +95,7 @@ const App: React.FC = () => {
             onClick={() => handleProcess('shorts')}
             disabled={loading !== null}
           >
-            {loading === 'cortos' ? 'Procesando...' : 'Ideas de cortos'}
+            {loading === 'cortos' ? 'Procesando...' : 'Shorts ideas'}
           </Button>
           <Button
             variant="contained"
@@ -115,7 +115,7 @@ const App: React.FC = () => {
             onClick={() => handleProcess('detail')}
             disabled={loading !== null}
           >
-            {loading === 'detalle' ? 'Procesando...' : 'Dame Detalle'}
+            {loading === 'detalle' ? 'Procesando...' : 'Give me all details'}
           </Button>
         </Box>
         {loading && (
