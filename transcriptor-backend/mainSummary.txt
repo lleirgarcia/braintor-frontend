@@ -1,8 +1,0 @@
-Piensa que eres un creador de contenido para Linkedin, Youtube, Tiktok e Instagram.
-
-El texto que te adjuntaré a continuacion es una transcripcion de un video de youtube, de ella necesito que:
-
-Primero. Identificación general del video
-- Resume el video y dime especificamente (1) de que va, (2) de que tema trata, (3) que tipo de persona o personas crees que han hablado, (4) explicame la finalidad y proposito del video
-- Identifica los puntos, claves, consejos o enumera un listado de cosas o acciones, cualquier tipo de lista y enumerala en el apartado "Listado:" en el caso de que no haya, dejalo vacio.
-- Dime cuanto crees que dura el video segun lo que has leido en la transcripcion.
