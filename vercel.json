@@ -1,0 +1,14 @@
+{ "version": 2, 
+  "installCommand": "npm run install:all",
+  "buildCommand": "npm run build",
+  "outputDirectory": "/transcriptor-frontend/build",
+  "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "/transcriptor-backend/dist/index.js"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/transcriptor-frontend"
+      }
+    ]}

@@ -1,3 +1,7 @@
 transcriptor-backend/node_modules
 transcriptor-backend/.env
+transcriptor-backend/dist
+
 transcript-frontend/node_modules
+node_modules
+.vercel

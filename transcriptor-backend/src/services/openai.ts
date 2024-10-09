@@ -13,7 +13,6 @@ class OpenAIService {
   }
 
   public async processOpenAICall(transcription: string, promptFile: string): Promise<string> {
-    console.log(promptFile)
     if (!fs.existsSync(promptFile)) {
       throw new Error('File not found');
     }

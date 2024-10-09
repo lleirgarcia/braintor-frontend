@@ -25,7 +25,7 @@ const App: React.FC = () => {
     setSummary('');
 
     try {
-      const response = await fetch('http://localhost:3001/process', {
+      const response = await fetch('http:/yto-ptimizer-lleirgarcia-lleirgarcias-projects.vercel.app/process', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

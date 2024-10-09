@@ -40,9 +40,13 @@ async function promptByType(type: String) {
    return path.join(process.cwd(), `${process.env.PROMPT_FILE}${type}.txt`);
 }
   
+app.get("/", (req: Request, res: Response) => {
+    res.send("Express on Vercel");
+});
 
-// Configuración del puerto
 const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = app;
