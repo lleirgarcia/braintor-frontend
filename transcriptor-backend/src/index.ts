@@ -2,7 +2,8 @@ import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import { OpenAI } from 'openai';
 import dotenv from 'dotenv';
-import { openAIService } from './services/openai'; // Importa el servicio
+import { openAIService } from './services/openai'; 
+import path from 'path';
 
 // Cargar variables de entorno
 dotenv.config();
@@ -26,16 +27,18 @@ app.post('/process', async (req: Request, res: Response) => {
     }
 
     try {
-        const detailTranscription = await openAIService.processOpenAICall(transcription, "mainSummary");
-        console.log(detailTranscription)
-        const response = await openAIService.processOpenAICall(detailTranscription, transcriptionType);
+        const detailTranscription = await openAIService.processOpenAICall(transcription, await promptByType("mainSummary"));
+        const response = await openAIService.processOpenAICall(detailTranscription, await promptByType(transcriptionType));
         res.json({ response });
     } catch (error) {
         console.error('Error al procesar la solicitud de OpenAI:', error);
         res.status(500).json({ message: 'Error interno del servidor' });
     }
 });
-  
+
+async function promptByType(type: String) {
+   return path.join(process.cwd(), `${process.env.PROMPT_FILE}${type}.txt`);
+}
   
 
 // Configuración del puerto
