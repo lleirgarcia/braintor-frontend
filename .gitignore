@@ -1,7 +1,7 @@
 transcript-frontend/node_modules
 node_modules
 .vercel
-
+.env
 
 # dependencies
 /node_modules
